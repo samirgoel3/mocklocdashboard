@@ -1,0 +1,3 @@
+interface YourQuerriesScreenViewProps{
+    testYourQuerriesScreenValue:string
+}

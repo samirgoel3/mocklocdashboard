@@ -1,0 +1,3 @@
+interface WebViewScreenViewProps{
+    testWebViewScreenValue:string
+}

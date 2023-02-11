@@ -1,0 +1,3 @@
+interface StPointsScreenViewProps{
+    testStPointScreenValue:string
+}

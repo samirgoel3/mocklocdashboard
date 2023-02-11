@@ -1,0 +1,3 @@
+interface AppQueryScreenViewProps{
+    appQueryTestValue:string
+}

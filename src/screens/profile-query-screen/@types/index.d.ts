@@ -1,0 +1,3 @@
+interface ProfileQueryScreenViewProps{
+    testProfileQueryScreenValue:string
+}

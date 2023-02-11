@@ -1,0 +1,3 @@
+interface UsersListScreenViewProps{
+    testUsersListScreenValue:string
+}

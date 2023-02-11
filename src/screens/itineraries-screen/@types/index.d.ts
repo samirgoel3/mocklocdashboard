@@ -1,0 +1,3 @@
+interface ItinerariesScreenViewProps {
+    testItinerariesScreenViewValue:string
+}

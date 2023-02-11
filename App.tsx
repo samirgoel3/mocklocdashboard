@@ -1,50 +1,103 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar, Text, useColorScheme
-} from 'react-native';
-import Trophy from './assets/images/trophy.svg';
-
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-
-
+import { Button, View } from 'react-native';
+import UIText from './src/components/ui-text';
+import AppQueryScreen from './src/screens/app-query-screen/index';
+import ItinerariesScreen from './src/screens/itineraries-screen/itineraries-screen';
+import LoginScreen from './src/screens/login-screen';
+import ProfileQueryScreen from './src/screens/profile-query-screen/index';
+import StPlaylistScreen from './src/screens/st-playlists-screen';
+import StPointsScreen from './src/screens/st-points-screen';
+import UsersListScreen from './src/screens/user-list-screen';
+import WebViewScreen from './src/screens/web-view-screen';
+import YourQuerriesScreen from './src/screens/your-querries-screen';
 
 
 function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+  const Stack = createNativeStackNavigator();
+  
+
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView contentInsetAdjustmentBehavior="automatic" style={{ padding: 10 }}>
-        <Text style={{ fontFamily: 'Nunito-Black', fontSize: 40 }}>Black</Text>
-        <Text style={{ fontFamily: 'Nunito-Bold', fontSize: 40 }}>Bold</Text>
-        <Text style={{ fontFamily: 'Nunito-ExtraBold', fontSize: 40 }}>Extra-Bold</Text>
-        <Text style={{ fontFamily: 'Nunito-ExtraLight', fontSize: 40 }}>Extra light</Text>
-        <Text style={{ fontFamily: 'Nunito-Light', fontSize: 40 }}>Light</Text>
-        <Text style={{ fontFamily: 'Nunito-Medium', fontSize: 40 }}>Medium</Text>
-        <Text style={{ fontFamily: 'Nunito-Regular', fontSize: 40 }}>Regular</Text>
-        <Text style={{ fontFamily: 'Nunito-SemiBold', fontSize: 40 }}>Semi Bold</Text>
-        <Trophy height={100} width={100} />
-      </ScrollView>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name='MyScreen' component={YourQuerriesScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
+
+
+
+
+
+function HomeScreen({navigation}) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <UIText value='I am Home Screen' textType='extraBold' />
+      <Button title='Move To App Querry Screen' onPress={()=>{ navigation.navigate('MainScreen')}}/>
+    </View>
+  );
+}
+
+
+
+
+
+const BottomStatck = ()=>{
+  const BottomStack = createBottomTabNavigator();
+  return (
+    <BottomStack.Navigator>
+      <BottomStack.Screen name="Itineraries" component={Itineraries} />
+      <BottomStack.Screen name="Stationary Points" component={StationaryPoints} />
+      <BottomStack.Screen name="Stationary Playlists" component={StationaryPlaylist} />
+      <BottomStack.Screen name="Your Querries" component={YourQuerries} />
+    </BottomStack.Navigator>
+  );
+  
+}
+
+
+function Itineraries({ }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <UIText value='Itineraries Screen' textType='bold' />
+    </View>
+  );
+}
+
+function StationaryPoints({ }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <UIText value='Stationary Points Screen' textType='bold' />
+    </View>
+  );
+}
+
+function StationaryPlaylist({ }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <UIText value='Stationary Playlist Screen' textType='bold' />
+    </View>
+  );
+}
+
+function YourQuerries({navigation}) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <UIText value='Querry Screen' textType='bold' />
+      <Button title='Open Profile Screen' onPress={()=>{ navigation.navigate('home_screen') }}/>
+    </View>
+  );
+}
+
+
+
+
+
 
 
 export default App;
