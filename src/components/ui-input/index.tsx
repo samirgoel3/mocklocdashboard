@@ -14,5 +14,10 @@ const UIInput: React.FunctionComponent<UIInputProps> = (props: UIInputProps) => 
     )
 }
 
+const getBorderStyle = (type:string) =>{
+    if(type == "password"){ return styles.root}
+    else{ return null;}
+}
+
 
 export default UIInput;

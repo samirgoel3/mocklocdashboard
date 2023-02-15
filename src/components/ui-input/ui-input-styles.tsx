@@ -5,8 +5,9 @@ export const styles = StyleSheet.create({
         flexDirection:'row',
         backgroundColor:'#fff',
         borderRadius:5,
-        borderWidth:1,
+        borderWidth:0.5,
         height:50,
-        borderColor:'red'
+        margin:10,
+        borderColor:'#bbb'
     }
 })

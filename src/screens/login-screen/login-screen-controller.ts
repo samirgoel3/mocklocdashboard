@@ -1,7 +1,7 @@
 const LoginScreenController = ():LoginScreenViewProps => {
 
     return {
-        test:'Hello Samir Goel'
+        test:'This is Login Srceen view needs to be set here accordingly'
     }
 
 }
