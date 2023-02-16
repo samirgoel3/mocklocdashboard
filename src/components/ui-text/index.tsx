@@ -1,22 +1,25 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text, TextStyle, ViewStyle } from 'react-native'
 
 type UITextProps = {
   textType?: 'extraBold' | 'bold' | 'light' | 'extraLight' | 'regular' | 'medium' | 'semiBold'
-  value: string ,
-  color?: string ,
-  size?: Number
+  value: string,
+  color?: string,
+  size?: Number,
+  containerStyle?: ViewStyle,
+  textStyle?: TextStyle,
+
 }
 
 
 
-const UIText: React.FunctionComponent<UITextProps> = (props:UITextProps) => {
+const UIText: React.FunctionComponent<UITextProps> = (props: UITextProps) => {
   return (<Text
-    style={{
+    style={[{
       fontFamily: getFontTtype(props.textType),
       color: getFontColor(props.color),
-      fontSize: getFontSize(props.size)
-    }}
+      fontSize: getFontSize(props.size),
+    }, props.containerStyle, props.textStyle]}
   >{props.value}</Text>)
 }
 
@@ -50,10 +53,10 @@ const getFontColor = (color: any) => {
   }
 }
 
-const getFontSize = (size:any) => {
-  if(size){
+const getFontSize = (size: any) => {
+  if (size) {
     return size;
-  }else{
+  } else {
     return 30;
   }
 }

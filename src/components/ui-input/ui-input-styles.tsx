@@ -1,13 +1,21 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 // import COLORS from '../../constants/colors';
 export const styles = StyleSheet.create({
-    root:{
-        flexDirection:'row',
-        backgroundColor:'#fff',
-        borderRadius:5,
-        borderWidth:0.5,
-        height:50,
-        margin:10,
-        borderColor:'#bbb'
+    root: {
+        flexDirection: 'row',
+        backgroundColor: '#fff',
+        borderRadius: 5,
+        borderWidth: 0.5,
+        height: 50,
+        alignItems: 'center',
+        borderColor: '#bbb',
+        paddingHorizontal: 20
+    },
+    input: {
+        flex: 1,
+        fontSize: 20,
+        height: 49,
+        fontFamily: 'Nunito-Bold',
+        color: '#333'
     }
 })
