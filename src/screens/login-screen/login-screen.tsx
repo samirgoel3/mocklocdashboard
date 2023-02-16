@@ -2,12 +2,14 @@ import React from 'react';
 import LoginScreenController from './login-screen-controller';
 import LoginScreenView from './login-screen-view';
 
-const LoginScreen = ()=>{
+const LoginScreen = () => {
 
     const CONTROLLER = LoginScreenController()
 
     return (
-        <LoginScreenView  test={CONTROLLER.test}/>
+        <LoginScreenView
+            test={CONTROLLER.test}
+            testFunction={CONTROLLER.testFunction} />
     )
 }
 

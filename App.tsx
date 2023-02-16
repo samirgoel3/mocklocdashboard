@@ -1,15 +1,15 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
+import useAppController from './app-controller';
 import AuthStack from './src/navigators/auth-stack/auth-stack';
 import HomeStack from './src/navigators/home-stack';
 
-const Loggedin = true;
-
 function App(): JSX.Element {
 
+  const CONTROLLER = useAppController();
   return (
     <NavigationContainer>
-      {Loggedin ? <HomeStack /> : <AuthStack />}
+      {CONTROLLER.isUserLoggedin ? <HomeStack /> : <AuthStack />}
     </NavigationContainer>
   );
 }

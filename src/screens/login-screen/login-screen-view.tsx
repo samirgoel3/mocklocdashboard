@@ -1,8 +1,7 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Button, View } from 'react-native';
 import UIInput from '../../components/ui-input';
 import UIText from '../../components/ui-text/index';
-import styles from './login-screen-style';
 
 
 
@@ -12,6 +11,7 @@ const LoginScreenView:React.FC<LoginScreenViewProps> = (props:LoginScreenViewPro
         <View>
             <UIText value={props.test} textType='extraBold' />
             <UIInput type='email'/>
+            <Button title='Test Save user details' onPress={()=>{props.testFunction()}}/>
 
         </View>
     )
