@@ -3,7 +3,7 @@ import React from 'react';
 import AuthStack from './src/navigators/auth-stack/auth-stack';
 import HomeStack from './src/navigators/home-stack';
 
-const Loggedin = false;
+const Loggedin = true;
 
 function App(): JSX.Element {
 

@@ -1,0 +1,3 @@
+interface SettingsScreenViewProps{
+    testSettingscreenValue:string
+}

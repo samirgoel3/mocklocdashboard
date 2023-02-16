@@ -1,3 +1,3 @@
- interface LoginScreenViewProps { 
+interface LoginScreenViewProps { 
     test:string
 }

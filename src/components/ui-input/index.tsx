@@ -3,7 +3,7 @@ import { TextInput, View } from 'react-native';
 import { styles } from './ui-input-styles';
 
 interface UIInputProps {
-    type?: 'password' | 'email' | 'text' | 'numeric'
+    type?: 'password' | 'email' | 'search'
 }
 
 const UIInput: React.FunctionComponent<UIInputProps> = (props: UIInputProps) => {

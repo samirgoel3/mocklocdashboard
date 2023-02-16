@@ -1,8 +1,15 @@
-const useItinerariesScreenController = ():ItinerariesScreenViewProps=>{
+import { useNavigation } from "@react-navigation/native";
+import { AllScreenNavigationProps } from "../../navigators/@types";
 
-    return{
-        testItinerariesScreenViewValue:'This is for itineraries screen'
+const useItinerariesScreenController = (): ItinerariesScreenViewProps => {
+    const NAVIGATION = useNavigation<AllScreenNavigationProps>();
+
+    const tesNavigation = () => { NAVIGATION.navigate('AppQueryScreen') }
+
+    return {
+        testItinerariesScreenViewValue: 'This is for itineraries screen',
+        onButtonClick: tesNavigation
     }
 }
 
-export default useItinerariesScreenController ;
+export default useItinerariesScreenController;

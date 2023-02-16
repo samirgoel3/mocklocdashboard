@@ -1,3 +1,4 @@
 interface ItinerariesScreenViewProps {
-    testItinerariesScreenViewValue:string
+    testItinerariesScreenViewValue:string,
+    onButtonClick:()=>void
 }
