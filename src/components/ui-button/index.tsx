@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import React from 'react';
 import { Text, TextStyle, ViewStyle } from 'react-native';
-import { styles } from './ui-button-styles'
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { styles } from './ui-button-styles';
 
 interface UiButtonProps {
     type?: 'filled' | 'filled',

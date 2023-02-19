@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import ItinerariesScreenView from './itineraries-screen-view'
+import React from 'react';
 import useItinerariesScreenController from './itineraries-screen-controller';
+import ItinerariesScreenView from './itineraries-screen-view';
 
 const ItinerariesScreen = () => {
 

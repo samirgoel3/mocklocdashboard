@@ -9,7 +9,8 @@ const LoginScreen = () => {
     return (
         <LoginScreenView
             test={CONTROLLER.test}
-            testFunction={CONTROLLER.testFunction} />
+            testFunction={CONTROLLER.testFunction} 
+            onAboutAuthorClick={CONTROLLER.onAboutAuthorClick}/>
     )
 }
 
