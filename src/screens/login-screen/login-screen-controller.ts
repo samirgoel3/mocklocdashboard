@@ -23,6 +23,7 @@ const LoginScreenController = ():LoginScreenViewProps => {
     }
 
     const testDispatcherForCount = () =>{
+        console.log("**** testing dispatch")
         newDispatch(getDispatcherIncrementCounter(56))
     }
 

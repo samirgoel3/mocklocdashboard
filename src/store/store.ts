@@ -1,14 +1,25 @@
-import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { configureStore, combineReducers, getDefaultMiddleware } from "@reduxjs/toolkit";
 import loginScreenSlice from "./slices/login-screen-slice/login-screen-slice";
 import stationaryPointSlice from "./slices/stationary-point-slice";
+
 
 const RootReducer = combineReducers({
   loginReducers: loginScreenSlice,
   stationaryPointReduces: stationaryPointSlice
 })
 
+
+
+
 export const store = configureStore({
-  reducer: RootReducer
+  reducer: RootReducer,
+  middleware: (getDefaultMiddleware) => {
+    if (__DEV__) {
+      const createDebugger = require('redux-flipper').default;
+      return getDefaultMiddleware().concat(createDebugger());
+    }
+    return getDefaultMiddleware();
+  }
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
