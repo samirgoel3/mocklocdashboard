@@ -22,7 +22,13 @@ const get = async (key: string) => {
   }
 }
 
-const remove = async (key: string) => { }
+const remove = async (key: string) => { 
+  try {
+    await AsyncStorage.removeItem(key)
+  } catch (e) {
+    console.log("ERROR While reading data ", " " + key + ": " + e)
+  }
+}
 
 const clearAll = async () => { }
 

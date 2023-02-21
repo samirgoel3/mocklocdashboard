@@ -3,5 +3,6 @@ interface SettingsScreenViewProps{
     userImage:string,
     userName:string,
     userEmail:string,
+    logout:()=>void
 
 }

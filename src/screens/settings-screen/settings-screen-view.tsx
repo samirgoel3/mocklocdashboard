@@ -1,5 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
+import UiButton from '../../components/ui-button';
 import UIText from '../../components/ui-text';
 import styles from './settings-screen-style';
 const SettingsScreenView: React.FC<SettingsScreenViewProps> = (props: SettingsScreenViewProps) => {
@@ -32,6 +33,8 @@ const SettingsScreenView: React.FC<SettingsScreenViewProps> = (props: SettingsSc
             </View>
 
             <UIText value={props.testSettingscreenValue} />
+
+            <UiButton label='Logout' onButtonClick={props.logout}/>
         </View>
     )
 }

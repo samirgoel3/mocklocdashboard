@@ -8,6 +8,7 @@ const SettingsScreen = () => {
             userEmail={CONTROLLER.userEmail}
             userImage={CONTROLLER.userName}
             userName={CONTROLLER.userName}
+            logout={CONTROLLER.logout}
         />
     )
 }
