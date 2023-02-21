@@ -1,3 +1,7 @@
 interface SettingsScreenViewProps{
-    testSettingscreenValue:string
+    testSettingscreenValue:string,
+    userImage:string,
+    userName:string,
+    userEmail:string,
+
 }

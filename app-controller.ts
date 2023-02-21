@@ -3,7 +3,8 @@ import { useState } from 'react';
 import { AsyncStorageKeys } from './src/util/constants/async-storage-keys';
 
 type AppControllerProps = {
-    isUserLoggedin: boolean
+    isUserLoggedin: boolean,
+    isLoading:boolean,
 }
 
 
@@ -17,16 +18,28 @@ const checkLogin = async () => {
 const useAppController = (): AppControllerProps => {
 
     const [loggedIn, setLoggedInState] = useState(false)
+    const [isLoading, setLoading ] = useState(true)
+   
+   
 
-    const checkIsUserLoggedin = async () => {
-        const val = await checkLogin();
-        setLoggedInState(val)
+    const updateLogin = () => {
+        
+        setTimeout(async()=>{
+            const val = await checkLogin();
+            console.log("****** Logged In State: "+val)
+            setLoggedInState(val)
+            setLoading(false)
+        }, 3000)
+        
     }
 
-    checkIsUserLoggedin();
+  
+
+    updateLogin();
 
     return {
-        isUserLoggedin:loggedIn
+        isUserLoggedin:loggedIn,
+        isLoading:isLoading,
     }
 }
 

@@ -8,9 +8,10 @@ const LoginScreen = () => {
 
     return (
         <LoginScreenView
+            onAboutAuthorClick={CONTROLLER.onAboutAuthorClick}
+            onLoginClick={CONTROLLER.onLoginClick}
             test={CONTROLLER.test}
-            testFunction={CONTROLLER.testFunction} 
-            onAboutAuthorClick={CONTROLLER.onAboutAuthorClick}/>
+        />
     )
 }
 

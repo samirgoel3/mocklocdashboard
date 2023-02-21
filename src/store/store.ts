@@ -1,11 +1,13 @@
-import { configureStore, combineReducers, getDefaultMiddleware } from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import loginScreenSlice from "./slices/login-screen-slice/login-screen-slice";
+import splashScreenSlice from "./slices/splash-screen-slice/splash-screen-slice";
 import stationaryPointSlice from "./slices/stationary-point-slice";
 
 
 const RootReducer = combineReducers({
   loginReducers: loginScreenSlice,
-  stationaryPointReduces: stationaryPointSlice
+  stationaryPointReduces: stationaryPointSlice,
+  splashReducers:splashScreenSlice
 })
 
 

@@ -2,7 +2,7 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 import { createSlice } from '@reduxjs/toolkit'
 
 export interface LoginScreenState {
-  value: number
+  value: number,
 }
 
 const initialState: LoginScreenState = {
@@ -19,6 +19,8 @@ export const loginScreenSlice = createSlice({
     decrement: (state) => {state.value -= 1},
 
     incrementByAmount: (state, action: PayloadAction<number>) => {state.value += action.payload},
+
+
   },
 })
 

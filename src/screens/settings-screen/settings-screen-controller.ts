@@ -17,6 +17,9 @@ const useSettingsScreenController = ():SettingsScreenViewProps=>{
 
     return {
         testSettingscreenValue:userDetails,
+        userEmail:"samirgoel3@gmail.com",
+        userImage:"some user image url ",
+        userName:"Samir Goel"
     }
 
 }

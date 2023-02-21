@@ -1,5 +1,8 @@
 interface LoginScreenViewProps { 
-    test:string
+    test:string,
+    onLoginClick:()=>void
     onAboutAuthorClick:()=>void
-    testFunction:()=>void
 }
+
+
+

@@ -39,8 +39,8 @@ const LoginScreenView: React.FC<LoginScreenViewProps> = (props: LoginScreenViewP
 
 
             <UiButton
-                label='Testing button'
-                onButtonClick={() => { Alert.alert("Working") }}
+                label='Login'
+                onButtonClick={props.onLoginClick}
             />
 
             <UiButton
