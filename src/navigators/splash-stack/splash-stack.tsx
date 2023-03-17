@@ -9,8 +9,8 @@ const SplashStack = ()=>{
     return (
         <SplashStacker.Navigator initialRouteName='SplashScreen'>
             <SplashStacker.Screen name='AuthStack' component={AuthStack} options={{headerShown:false}}/>
-            <SplashStacker.Screen name='HomeStackScreen' component={HomeStack}/>
-            <SplashStacker.Screen name='SplashScreen' component={SplashScreen}/>
+            <SplashStacker.Screen name='HomeStackScreen' component={HomeStack} options={{headerShown:false}}/>
+            <SplashStacker.Screen name='SplashScreen' component={SplashScreen} options={{headerShown:false}}/>
         </SplashStacker.Navigator>
     )
 }

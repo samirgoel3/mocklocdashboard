@@ -8,9 +8,11 @@ import StationaryPlaylistIcon from '../../constants/icons/StPlaylistIcon';
 import StationaryPointIcon from '../../constants/icons/StPointIcon';
 import ItinerariesScreen from '../../screens/itineraries-screen';
 import SettingsScreen from '../../screens/settings-screen';
-import StPlaylistScreen from '../../screens/st-playlists-screen';
-import StPointsScreen from '../../screens/st-points-screen';
+// import StPlaylistScreen from '../../screens/st-playlists-screen';
 import SettingsInActiveIcon from '../../constants/icons/SettingIconInActive';
+import MemoisationExample from '../../screens/memoisation-example';
+import StPointsScreen from '../../screens/st-points-screen';
+import DebouncingExample from '../../screens/debouncing-example';
 
 
 
@@ -36,7 +38,8 @@ const BottomStack = () => {
                 }} />
             <BottomStacker.Screen
                 name='StationaryPalylistScreen'
-                component={StPlaylistScreen}
+                component={DebouncingExample}
+                // component={MemoisationExample}
                 options={{
                     headerShown: false,
                     tabBarLabel: 'Playlists',

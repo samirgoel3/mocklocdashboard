@@ -10,7 +10,7 @@ const LoginScreen = () => {
         <LoginScreenView
             onAboutAuthorClick={CONTROLLER.onAboutAuthorClick}
             onLoginClick={CONTROLLER.onLoginClick}
-            test={CONTROLLER.test}
+            appHeading={CONTROLLER.appHeading}
         />
     )
 }

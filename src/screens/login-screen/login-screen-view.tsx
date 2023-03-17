@@ -12,7 +12,11 @@ const LoginScreenView: React.FC<LoginScreenViewProps> = (props: LoginScreenViewP
     return (
         <View style={styles.container}>
 
-            <UIText value={props.test}/>
+            <UIText 
+            value={props.appHeading}
+             containerStyle={styles.heading_style}
+             textType={'extraBold'} 
+             />
 
             <UIText
                 value={"Enter Email"}

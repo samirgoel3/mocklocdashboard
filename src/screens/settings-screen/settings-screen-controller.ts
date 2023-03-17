@@ -4,11 +4,13 @@ import { useState } from "react";
 import { AsyncStorageKeys } from "../../util/constants/async-storage-keys";
 import SessionDetails from "../../util/session/session-details";
 type SplashScreenNavigationProps = NativeStackNavigationProp<SplashStackParams,'HomeStackScreen'>
+type HomeNavigationProps = NativeStackNavigationProp<HomeStackParams,'BottomStack'>
 
 const useSettingsScreenController = ():SettingsScreenViewProps=>{
 
     const [userDetails, setuserDetails] = useState("");
     const splashNavigation = useNavigation<SplashScreenNavigationProps>()
+    const homeNavigation = useNavigation<HomeNavigationProps>()
 
     const getUserDetails =  async() =>{
         const data  =  JSON.stringify(await SessionDetails.get(AsyncStorageKeys.UserDetails));
@@ -20,6 +22,18 @@ const useSettingsScreenController = ():SettingsScreenViewProps=>{
         splashNavigation.replace('AuthStack')
     }
 
+    const handleAppQuerryClick = () =>{
+        homeNavigation.navigate('AppQueryScreen')
+    }
+
+    const handleYourQuerryClick = () =>{
+        homeNavigation.navigate('YourQuerryScreen')
+    }
+
+    const handleViewAllUsersClick = () =>{
+        homeNavigation.navigate('UsersListScreen')
+    }
+
     getUserDetails();
 
 
@@ -28,7 +42,10 @@ const useSettingsScreenController = ():SettingsScreenViewProps=>{
         userEmail:"samirgoel3@gmail.com",
         userImage:"some user image url ",
         userName:"Samir Goel",
-        logout:perfromLogout
+        logout:perfromLogout,
+        onAppQuerry:handleAppQuerryClick,
+        onViewUser:handleViewAllUsersClick,
+        onYourQuerry:handleYourQuerryClick
     }
 
 }

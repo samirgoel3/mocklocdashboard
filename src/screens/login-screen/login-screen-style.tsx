@@ -13,7 +13,8 @@ const styles = StyleSheet.create({
   input_heading:{
     marginLeft: 2,
     color:'#333'
-  }
+  },
+  heading_style:{alignSelf:'center', marginVertical:20}
 
 
   

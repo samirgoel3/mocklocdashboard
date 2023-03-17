@@ -1,22 +1,24 @@
 import { StyleSheet } from 'react-native';
-// import { useSafeAreaInsets } from 'react-native-safe-area-context';
-
-// const insets = useSafeAreaInsets();
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    padding: 24,
     backgroundColor: '#1A202E',
-    paddingTop:35
+    flex: 1,
+    paddingLeft: 20
   },
-  user_detail_container:{
-    flexDirection:'row',
-    justifyContent:'flex-start',
-    alignItems:'center',
-    marginTop:10
+  user_detail_container: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    marginTop: 10, paddingLeft: 20
   },
-  user_name_email_container:{
-    paddingLeft:15
+  user_name_email_container: {
+    paddingLeft: 15
+  },
+  settings_item_style: {
+    flexDirection: 'row',
+    padding: 30,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
 

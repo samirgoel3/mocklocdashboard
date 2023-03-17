@@ -1,17 +1,22 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Alert, View } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import UiButton from '../../components/ui-button';
 import UIText from '../../components/ui-text';
+import RightIcon from '../../constants/icons/RightIcon';
 import styles from './settings-screen-style';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+
+
 const SettingsScreenView: React.FC<SettingsScreenViewProps> = (props: SettingsScreenViewProps) => {
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <UIText
                 value='Settings'
                 textType='bold'
                 size={25}
                 color={'white'}
-                containerStyle={{ marginTop: 10 }}
+                containerStyle={{ margin: 20 }}
             />
 
             <View style={styles.user_detail_container}>
@@ -32,10 +37,43 @@ const SettingsScreenView: React.FC<SettingsScreenViewProps> = (props: SettingsSc
 
             </View>
 
-            <UIText value={props.testSettingscreenValue} />
+            <TouchableOpacity style={styles.settings_item_style}
+                onPress={ props.onYourQuerry}>
+                <UIText value="Your Querries"
+                    size={20}
+                    color={"#999A9E"}
+                    containerStyle={{ flex: 1 }}
+                />
+                <RightIcon />
+            </TouchableOpacity>
 
-            <UiButton label='Logout' onButtonClick={props.logout}/>
-        </View>
+
+            <TouchableOpacity style={styles.settings_item_style}
+                onPress={props.onAppQuerry}>
+                <UIText value="Application Querries"
+                    size={20}
+                    color={"#999A9E"}
+                    containerStyle={{ flex: 1 }}
+                />
+                <RightIcon />
+            </TouchableOpacity>
+
+
+            <TouchableOpacity style={styles.settings_item_style}
+                onPress={props.onViewUser}>
+                <UIText value="All Users"
+                    size={20}
+                    color={"#999A9E"}
+                    containerStyle={{ flex: 1 }}
+                />
+                <RightIcon />
+            </TouchableOpacity>
+
+
+            {/* <UIText value={props.testSettingscreenValue} /> */}
+
+            <UiButton label='Logout' onButtonClick={props.logout} containerStyle={{ margin: 20 }} />
+        </SafeAreaView>
     )
 }
 

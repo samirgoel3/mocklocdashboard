@@ -9,6 +9,9 @@ const SettingsScreen = () => {
             userImage={CONTROLLER.userName}
             userName={CONTROLLER.userName}
             logout={CONTROLLER.logout}
+            onAppQuerry={CONTROLLER.onAppQuerry}
+            onViewUser={CONTROLLER.onViewUser}
+            onYourQuerry={CONTROLLER.onYourQuerry}
         />
     )
 }

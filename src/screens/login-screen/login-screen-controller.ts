@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import { useAppSelector } from "../../store/hooks";
 import { getDispatcherIncrementCounter } from "../../store/slices/login-screen-slice/login-screen-dispatchers";
 import { getCountSelector } from "../../store/slices/login-screen-slice/login-screen-selectors";
-import { getDispatcherForLoggedIn } from "../../store/slices/splash-screen-slice/splash-scree-dispatchers";
 import { AppDispatch } from "../../store/store";
 import { AsyncStorageKeys } from "../../util/constants/async-storage-keys";
 import SessionDetails from '../../util/session/session-details';
@@ -39,7 +38,7 @@ const LoginScreenController = ():LoginScreenViewProps => {
 
 
     return {
-        test: "This is Login Srceen view needs to be set here accordingly " + testCountValue,
+        appHeading: "Mockloc Dashboard",
         onAboutAuthorClick:navigateToWeViewScreen,
         onLoginClick:saveuserDetails
     }

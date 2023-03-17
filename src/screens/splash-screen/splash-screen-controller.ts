@@ -42,7 +42,7 @@ const useSplashScreenController = (): SplashScreenViewParam => {
 
     setTimeout(() => {
         setStateAcordingToLoginStatus();
-    }, 3000)
+    }, 1000)
 
 
 
