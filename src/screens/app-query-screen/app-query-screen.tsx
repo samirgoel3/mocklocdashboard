@@ -5,7 +5,8 @@ import AppQueryScreenView from './app-query-screen-view';
 const AppQueryScreen = ()=>{
     const CONTROLLER = useAppQuertScreenViewController();
     return (
-        <AppQueryScreenView appQueryTestValue={CONTROLLER.appQueryTestValue}/>
+        <AppQueryScreenView
+        appQueryTestValue={CONTROLLER.appQueryTestValue}/>
     )
 }
 
