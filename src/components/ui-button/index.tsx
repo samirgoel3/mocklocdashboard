@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { styles } from './ui-button-styles';
 
 interface UiButtonProps {
-    type?: 'filled' | 'filled',
+    type?: 'filled',
     label: string,
     fontStyle?: 'extraBold' | 'bold' | 'light' | 'extraLight' | 'regular' | 'medium' | 'semiBold'
     textStyle?: TextStyle,

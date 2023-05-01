@@ -1,4 +1,4 @@
-import { Svg, G, Path, Polygon, Polyline, Circle } from "react-native-svg"
+import { Circle, G, Path, Polyline, Svg } from "react-native-svg"
 
 const ItinerariesIcon = () => {
     return (
